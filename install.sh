@@ -17,6 +17,7 @@ fi
 
 if [ $ERROR -ne 0 ] ; then
     echo "[FINAL STATE] Preconditions failed. I won't do anything."
+fi
 
 # Install procedure #
 if [ ! -f composer.lock ] ; then
