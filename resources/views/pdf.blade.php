@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="{{public_path('img/attestation-de-deplacement-derogatoire.jpg')}}" style="width: 100%; position: absolute;">
+    <img src="{{public_path('img'.DIRECTORY_SEPARATOR.'attestation-de-deplacement-derogatoire.jpg')}}" style="width: 100%; position: absolute;">
     <p style="position: absolute; top:140px; left: 140px;">{{$data['input_nom']}}</p>
     
     <p style="position: absolute; top:167px; left: 140px;">{{$data['input_date_naissance']}}</p>
