@@ -18,11 +18,13 @@ Si vous remplissez les prérequis :
 * Installation de l'environnement de l'application (Nécessite composer):
 
 Lancer `install.bat` sous Windows
+
 Lancer `install.sh` sous Linux
 
 * Lancement de l'application:  
 
 Lancer `run.bat` sous Windows
+
 Lancer `run.sh` sous Linux
 
 
