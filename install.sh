@@ -1,9 +1,22 @@
 #!/bin/sh
 
-# Check is compose deps are locked
 ERROR=0
 CHANGE=0
 
+# Preconditions  #
+
+if [ ! `command -v composer` ] ; then 
+    echo "[ERROR] Composer executable not found in PATH."
+    ERROR=1
+fi 
+
+if [ ! `command -v php` ] ; then
+    echo "[ERROR] Php executable not found in PATH."
+    ERROR=1
+fi
+
+
+# Install procedure #
 
 if [ -f .env ] ; then
     php artisan key:generate
@@ -25,6 +38,11 @@ fi
 if [ $CHANGE -eq 0 ] ; then
     echo "[FINAL STATE] no change were done."
 fi
+
+
+
+# Maybe add some post-conditions later #
+
 
 if [ $ERROR -ne 0 ] ; then 
     echo "[FINAL STATE] Some errors occured, please pay attention to error messages and fix them befor running the app."
