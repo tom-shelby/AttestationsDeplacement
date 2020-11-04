@@ -7,8 +7,9 @@
 
 Installation:
 ---
-## Pré-Requis:
-PHP, Composer, avoir configurer un Token Google (ou utiliser votre propre service SMTP pour l'envoi d'emails)
+### Pré-Requis: PHP 7+, Composer
+ 
+Si vous remplissez les prérequis :
 
 * Récupération des sources:  
 
