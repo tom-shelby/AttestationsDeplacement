@@ -12,24 +12,8 @@ use Mail;
 class IndexController extends Controller
 {
 
-    /**
-     *
-     */
     public function index()
     {
-
-        // $pdf = App::make('pdf.wrapper');
-
-        // $view = view('pdfedit')->render();
-
-        // // dd($view);
-
-        // ini_set('max_execution_time', 300);
-
-        // $pdf->loadHtml($view);
-
-        // ini_restore('max_execution_time');
-
         return view('pdfedit');
     }
 
@@ -54,7 +38,8 @@ class IndexController extends Controller
         
         $data['input_date_naissance'] = date('d/m/Y', strtotime($data['input_date_naissance']));
         $data['input_fait_le'] = date('d/m/Y', strtotime($data['input_fait_le']));
-
+        
+        //Map permettant d'afficher au bon endroit sur la coche du motif de déplacement sur le jpg 
         $pixmapMotif = [
             1 => 280,
             2 => 335,
@@ -67,23 +52,27 @@ class IndexController extends Controller
             9 => 715,
         ];
 
-
-        //$html = ' <img src="'.asset('img\attestation-de-deplacement-derogatoire.jpg').'">';
-
         $pdf->loadView('pdf', compact('data', 'pixmapMotif'));
-        $pdf->save(storage_path('document.pdf'));
+
+        $lastDocumentPath = storage_path('attestation.pdf');
+
+        $pdf->save($lastDocumentPath);
+
         ini_restore('max_execution_time');
 
+        //Envoi de l'email
         if(isset($request['input_mail'])) {
             $mail = $request['input_mail'];
 
-            Mail::send('mail', [], function($message) use ($mail) {
+            Mail::send('mail', [], function($message) use ($mail, $lastDocumentPath) {
                 $message->to($mail)
-                        ->from('baptiste.catois@gmail.com')
-                        ->attach(storage_path('document.pdf'));
+                        ->from(config('mail.from.address'))
+                        ->attach($lastDocumentPath);
             });
         }
         
+        //Suppression du document
+        unlink($lastDocumentPath);
 
         return $pdf->stream();
     }

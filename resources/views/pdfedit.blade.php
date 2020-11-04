@@ -127,13 +127,13 @@
                             $matches = array();
                             preg_match('/\d+-\d+-\d+/', today(), $matches);
                             return $matches[0];
-                        })}}" readonly>
+                        })}}">
                 </div>
             </div>
             <!-- FIN Fait le-->
             <!-- Heure de sortie -->
             <div class="form-group row">
-                <label for="input_heure_sortie" class="col-form-label col-sm-2 text-right">Débutant à<span class="required">*</span></label>
+                <label for="input_heure_sortie" class="col-form-label col-sm-2 text-right">Heure de sortie<span class="required">*</span></label>
                 <div class="col-sm-10">
                     @error('input_heure_sortie')
                         <span class="text-danger"> {{$message}} </span>
@@ -153,7 +153,7 @@
                 
             </div>
         </form>
-    {{-- <img src="{{asset('img/attestation-de-deplacement-derogatoire.jpg')}}" class="img-fluid"> --}}
+    
     </div>
 </body>
 </html>
