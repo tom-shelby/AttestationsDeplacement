@@ -2,7 +2,7 @@
  
 @echo Renommage du fichier .env.example en fichier .env [exploitable par l'application]
 @TIMEOUT 6
-@REN ".env.example"  ".envv"
+@REN ".env.example"  ".env"
 @CLS
 
 @echo Generation d'une clef d'application qui vous est propre
