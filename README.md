@@ -7,13 +7,16 @@
 
 Installation:
 ---
+## Pré-Requis:
+PHP, Composer, avoir configurer un Token Google (ou utiliser votre propre service SMTP pour l'envoi d'emails)
+
 * Récupération des sources:  
 
 `git clone https://github.com/tom-shelby/AttestationsDeplacements.git`
 
-* Installation des dépendances :
+* Installation de l'environnement de l'application (Nécessite composer):
 
-`composer install`
+Lancer `install.bat`
 
 * Lancement de l'application (Windows):  
 
