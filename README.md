@@ -36,8 +36,5 @@ Fonctionnalités:
 
 TODO:
 ---
-
 - Attestations professionnelles (A FAIRE)
-
-- Fixer les droits d'accès aux dossiers Storage (afin d'éviter d'utiliser l'hébergement de l'image comme solution, et donc garder le contrôle sur la diffusion de ces documents.)
 
