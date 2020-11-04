@@ -15,19 +15,10 @@ if [ ! `command -v php` ] ; then
     ERROR=1
 fi
 
+if [ $ERROR -ne 0 ] ; then
+    echo "[FINAL STATE] Preconditions failed. I won't do anything."
 
 # Install procedure #
-
-if [ -f .env ] ; then
-    php artisan key:generate
-    echo "[INFO] Set a new app key."
-    CHANGE=1
-else
-    echo "[ERROR] Unable to find .env file. Be sure to copy the example file and configure it as you like." 
-    ERROR=1
-fi 
-
-
 if [ ! -f composer.lock ] ; then
     composer install
     CHANGE=1
@@ -38,6 +29,17 @@ fi
 if [ $CHANGE -eq 0 ] ; then
     echo "[FINAL STATE] no change were done."
 fi
+
+
+if [ -f .env ] ; then
+    php artisan key:generate
+    echo "[INFO] Set a new app key."
+    CHANGE=1
+else
+    echo "[ERROR] Unable to find .env file. Be sure to copy the example file and configure it as you like." 
+    ERROR=1
+fi 
+
 
 
 
