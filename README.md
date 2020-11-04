@@ -17,11 +17,13 @@ Si vous remplissez les prérequis :
 
 * Installation de l'environnement de l'application (Nécessite composer):
 
-Lancer `install.bat`
+Lancer `install.bat` sous Windows
+Lancer `install.sh` sous Linux
 
-* Lancement de l'application (Windows):  
+* Lancement de l'application:  
 
-Lancer `run.bat`
+Lancer `run.bat` sous Windows
+Lancer `run.sh` sous Linux
 
 
 Fonctionnalités:
