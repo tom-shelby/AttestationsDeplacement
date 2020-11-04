@@ -8,7 +8,7 @@
 
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <h1 class="text-center">Générateur d'Attestation de Déplacement Dérogatoire</h1>
+        <h1 class="text-center">Générateur d'Attestations de Déplacement Dérogatoire</h1>
         <h5>Téléchargez et/ou recevez par mail vottre attestation (si vous renseignez votre adresse mail)</h5>
     </div>
     <hr>
