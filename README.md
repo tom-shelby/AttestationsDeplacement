@@ -21,7 +21,7 @@ Lancer `install.bat` sous Windows
 
 Lancer `install.sh` sous Linux
 
-* Lancement de l'application:  
+* Lancement de l'application (sans serveur web comme apache):  
 
 Lancer `run.bat` sous Windows
 
@@ -32,9 +32,4 @@ Fonctionnalités:
 ---
 - Génération d'attestations dérogatoires de déplacements au format PDF
 - Possibilité de télécharger le PDF, ou de se l'envoyer par mail.
-
-
-TODO:
----
-- Attestations professionnelles (A FAIRE)
 
